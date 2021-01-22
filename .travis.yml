@@ -1,0 +1,13 @@
+arch: ppc64le
+language: c
+os: linux
+dist: xenial
+before_script:
+  - sudo upgrade -y
+  - sudo apt-get install libevent-dev
+script:
+  - ./autogen.sh
+  - ./configure
+  - make
+  - make test
+  - make install

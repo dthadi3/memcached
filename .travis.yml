@@ -5,13 +5,10 @@ language: c
 os: linux
 dist: xenial
 before_script:
-  - | 
-   if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then
-     sudo apt-get install libevent-dev
-   fi
+  - sudo apt-get install libevent-dev
 script:
   - ./autogen.sh
   - ./configure
   - make
-  - make test
   - make install
+  - make test

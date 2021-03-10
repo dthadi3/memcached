@@ -3,7 +3,7 @@ arch:
   - ppc64le
 language: c
 os: linux
-dist: bionic
+dist: focal
 before_script:
   - sudo apt-get install libevent-dev
 script:

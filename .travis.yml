@@ -5,7 +5,7 @@ language: c
 os: linux
 dist: bionic
 before_script:
-  - sudo apt-get install libevent-dev libseccomp-dev libsasl2-dev
+  - sudo apt-get install libssl-dev libevent-dev libseccomp-dev libsasl2-dev
 script:
   - ./autogen.sh
   - ./configure --enable-seccomp --enable-tls --enable-sasl --enable-sasl-pwdb
